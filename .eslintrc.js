@@ -54,6 +54,12 @@ module.exports = {
         tsx: 'never',
       },
     ],
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: ['src/components/**/*.stories.tsx'],
+      },
+    ],
     'react/react-in-jsx-scope': 'off',
     'react/jsx-filename-extension': [
       'error',
@@ -70,4 +76,19 @@ module.exports = {
       },
     ],
   },
-};
+    overrides: [
+      {
+        'files': ['*.tsx'],
+        'rules': {
+          'react/prop-types': 'off',
+        }
+      }
+    ],
+    settings: {
+      'import/resolver': {
+        node: {
+          paths: ['src']
+        }
+      }
+    }
+  }
