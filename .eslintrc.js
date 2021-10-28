@@ -57,10 +57,11 @@ module.exports = {
     'import/no-extraneous-dependencies': [
       'error',
       {
-        devDependencies: ['src/components/**/*.stories.tsx'],
+        devDependencies: ['src/components/**/*.{js,jsx,ts,tsx}'],
       },
     ],
     'react/react-in-jsx-scope': 'off',
+    'react/jsx-props-no-spreading': 'off',
     'react/jsx-filename-extension': [
       'error',
       {
